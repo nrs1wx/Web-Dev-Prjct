@@ -1,0 +1,45 @@
+.plane-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.plane-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.plane-card:hover {
+  transform: translateY(-4px);
+}
+
+.plane-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.plane-details {
+  padding: 1rem;
+}
+
+.plane-details h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.plane-details p {
+  margin: 0.25rem 0;
+  color: #555;
+}

@@ -1,0 +1,6 @@
+asgiref
+Django
+sqlparse
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt

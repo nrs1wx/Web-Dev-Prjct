@@ -1,0 +1,7 @@
+<h2>Manufacturers</h2>
+<div class="manufacturer-list">
+  <div class="manufacturer-card" *ngFor="let manufacturer of manufacturers" [routerLink]="['/manufacturers', manufacturer.id]">
+    <h3>{{ manufacturer.name }}</h3>
+    <p><strong>Headquarters:</strong> {{ manufacturer.headquarters_city }}</p>
+  </div>
+</div>

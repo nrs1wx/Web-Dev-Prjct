@@ -1,0 +1,12 @@
+<h2>Planes</h2>
+<div class="plane-list">
+  <div class="plane-card" *ngFor="let plane of planes" [routerLink]="['/planes', plane.id]">
+    <img *ngIf="plane.image_url" [src]="plane.image_url" alt="{{ plane.name }}" class="plane-image" />
+    <div class="plane-details">
+      <h3>{{ plane.name }}</h3>
+      <p><strong>Manufacturer:</strong> {{ plane.manufacturer.name }}</p>
+      <p><strong>Price:</strong> ${{ plane.price }}</p>
+      <p>{{ plane.description }}</p>
+    </div>
+  </div>
+</div>

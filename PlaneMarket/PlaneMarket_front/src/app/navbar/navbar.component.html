@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-left">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/manufacturers">Manufacturers</a>
+    <a routerLink="/planes">Planes</a>
+    <a routerLink="/orders">Orders</a>
+  </div>
+  <span *ngIf="auth.currentUser$ | async as user">
+    Welcome, {{ user }}!
+    <button (click)="logout()">Logout</button>
+  </span>
+  <a *ngIf="!(auth.currentUser$ | async)" routerLink="/login" class="login-link">Login</a>
+</nav>

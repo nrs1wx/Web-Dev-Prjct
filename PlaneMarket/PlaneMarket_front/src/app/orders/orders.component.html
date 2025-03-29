@@ -1,0 +1,17 @@
+<h2>Orders</h2>
+<div *ngIf="loadError" class="error-message">
+  <p>Login to see your orders</p>
+  <img src="https://media.tenor.com/tk3SuYsmVNcAAAAM/voytenko.gif"
+       alt="Login required"
+       style="max-width: 170px; width: 100%; margin-top: 1rem; border-radius: 8px;" />
+</div>
+<div class="orders-list">
+  <div class="order-card" *ngFor="let order of orders">
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <div class="order-plane">
+      <img *ngIf="order.plane.image_url" [src]="order.plane.image_url" alt="{{ order.plane.name }}" class="plane-image" />
+      <p><strong>Plane:</strong> {{ order.plane.name }} {{ order.plane.manufacturer.name }}</p>
+    </div>
+    <p><strong>Status:</strong> {{ order.status }}</p>
+  </div>
+</div>

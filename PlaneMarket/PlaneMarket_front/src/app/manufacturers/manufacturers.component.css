@@ -1,0 +1,39 @@
+.manufacturer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.manufacturer-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  padding: 1rem;
+}
+
+.manufacturer-card:hover {
+  transform: translateY(-4px);
+}
+
+.manufacturer-details {
+  padding: 0.5rem 0;
+}
+
+.manufacturer-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.manufacturer-card p {
+  margin: 0.15rem 0;  /* Reduce the gap between paragraphs */
+  color: #555;
+}

@@ -1,0 +1,15 @@
+<div class="plane-detail" *ngIf="plane">
+  <h2>{{ plane.manufacturer.name }} - {{ plane.name }}</h2>
+  <img *ngIf="plane.image_url" [src]="plane.image_url" alt="{{ plane.name }}" class="plane-image" />
+  <p><strong>Price:</strong> ${{ plane.price }}</p>
+  <p><strong>Description:</strong> {{ plane.description }}</p>
+  <p><strong>Manufacturer:</strong> {{ plane.manufacturer.name }}</p>
+  <p><strong>Headquarters:</strong>
+    {{ plane.manufacturer.headquarters_city || 'Not available' }},
+    {{ plane.manufacturer.headquarters_address || 'Not available' }}
+  </p>
+
+  <button (click)="orderPlane()" class="order-button">Order This Plane</button>
+</div>
+
+<p *ngIf="!plane">Loading plane details...</p>
